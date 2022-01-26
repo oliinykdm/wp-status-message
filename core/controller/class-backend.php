@@ -16,11 +16,7 @@ class Backend extends \WPStatusMessage\Controller\Base\Controller {
 
 	}
 	public function index() {
-		?>
-		<div class="wrap my-tools-parent">
-
-			<p>Foo bar. Bla bla. Your content here.</p>
-		</div>
-		<?php
+		$a = array('test' => array( 1=> 'test2', 2=> 'test3'));
+		$this->render( 'index', $a );
 	}
 }

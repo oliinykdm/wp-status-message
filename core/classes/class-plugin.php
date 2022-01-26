@@ -24,6 +24,13 @@ class Plugin {
 	public function __construct() {
 		$this->backend = new \WPStatusMessage\Controller\Backend();
 		add_action( 'admin_menu', array( $this, 'add_subsite_menu' ), 999 );
+		add_action( 'admin_init', array( $this, 'register_settings' ), 1 );
+	}
+
+	public function register_settings() {
+		register_setting( 'wpsm-options', 'wpsm_enabled', 'intval' );
+		register_setting( 'wpsm-options', 'wpsm_override', 'intval' );
+		register_setting( 'wpsm-options', 'wpsm_text', 'string' );
 	}
 
 	/**
