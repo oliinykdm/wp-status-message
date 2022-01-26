@@ -7,4 +7,5 @@ Author: Dima Oliynyk
 Version: 1.0
 Author URI: https://www.oliynyk.net
 */
+
 require_once( __DIR__ . '/core/autoload.php' );
